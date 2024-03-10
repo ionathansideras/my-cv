@@ -26,14 +26,18 @@ function App() {
                             <Route index element={<LandingPage />} />
                             {/* Define the routes for signIn, signUp, dashboard,
                             and creation */}
-                            <Route path="signIn" element={<SignIn />} />
-                            <Route path="signUp" element={<SignUp />} />
+                            <Route path="signin" element={<SignIn />} />
+                            <Route path="signup" element={<SignUp />} />
                             <Route path="dashboard" element={<Dashboard />} />
                             <Route path="creation" element={<Creation />} />
                         </Route>
                     ))}
-                    {/* If the path is "/", redirect to "/en" */}
-                    <Route path="/" element={<Navigate replace to="/en" />} />
+                    {/* The index route renders the LandingPage component */}
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="signin" element={<SignIn />} />
+                    <Route path="signup" element={<SignUp />} />
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="creation" element={<Creation />} />
                     {/* The "*" path is a catch-all route that renders the
                     NotFound component */}
                     <Route path="*" element={<NotFound />} />
