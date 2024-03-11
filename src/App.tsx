@@ -1,5 +1,5 @@
 // Import necessary components and hooks from react-router-dom
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Import your components
 import LandingPage from "./components/landingPage/LandingPage";
