@@ -1,6 +1,22 @@
 @import "_variables.scss";
 
 .landing-page {
+    height: 100vh;
+    position: relative;
+
+    .landing-page-background {
+        position: absolute;
+        top: 0;
+        right: -40%;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-image: url("./3d-background.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .landing-page-header {
         height: 10vh;
         display: flex;
@@ -52,6 +68,15 @@
                 color: rgb(199, 199, 199);
                 border-color: rgb(199, 199, 199);
             }
+        }
+    }
+
+    main {
+        display: flex;
+        width: 80%;
+
+        section {
+            display: flex;
         }
     }
 

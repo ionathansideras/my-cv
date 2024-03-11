@@ -1,8 +1,7 @@
-import logo from "../../assets/canvas-logo.svg";
-
 export default function LandingPage() {
     return (
         <div className="landing-page">
+            <div className="landing-page-background" />
             <header className="landing-page-header">
                 <div className="logo">
                     <span>{"<"}</span>
@@ -15,7 +14,15 @@ export default function LandingPage() {
                 </nav>
             </header>
             <main>
-                <section></section>
+                <section>
+                    <div className="neon-bar">
+                        <p>o</p>
+                        <div className="neon-bar-primary"></div>
+                        <div>{"<>"}</div>
+                        <div className="neon-bar-secondary"></div>
+                    </div>
+                    <div></div>
+                </section>
             </main>
         </div>
     );
