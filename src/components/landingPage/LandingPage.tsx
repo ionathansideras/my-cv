@@ -1,7 +1,13 @@
+import google from "../../assets/google.svg";
+import microsoft from "../../assets/microsoft2.svg";
+import facebook from "../../assets/facebook.svg";
+import apple from "../../assets/apple.svg";
+import amazon from "../../assets/amazon.svg";
+import netflix from "../../assets/netflix.svg";
+
 export default function LandingPage() {
     return (
         <div className="landing-page">
-            <div className="landing-page-background" />
             <header className="landing-page-header">
                 <div className="logo">
                     <span>{"<"}</span>
@@ -16,12 +22,37 @@ export default function LandingPage() {
             <main>
                 <section>
                     <div className="neon-bar">
-                        <p>o</p>
+                        <div className="round-obj"></div>
                         <div className="neon-bar-primary"></div>
-                        <div>{"<>"}</div>
+                        <div className="icon-bar-container">
+                            <div className="icon-bar">{"< >"}</div>
+                            <div className="icon-bar-background"></div>
+                        </div>
                         <div className="neon-bar-secondary"></div>
                     </div>
-                    <div></div>
+                    <div className="section-content">
+                        <h1>Let’s build from here</h1>
+                        <p>
+                            CanvasCV is a platform that allows you to create a
+                            professional resume in minutes.
+                        </p>
+                        <div className="section-email">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                            />
+                            <button>Get Started</button>
+                        </div>
+                        <p>Templates approved by</p>
+                        <div className="company-logos">
+                            <img src={google} alt="Google" />
+                            <img src={microsoft} alt="Microsoft" />
+                            <img src={facebook} alt="Facebook" />
+                            <img src={apple} alt="Apple" />
+                            <img src={amazon} alt="Amazon" />
+                            <img src={netflix} alt="Netflix" />
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>
