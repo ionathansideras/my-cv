@@ -71,8 +71,9 @@
         align-items: center;
 
         section {
-            width: 80%;
             display: flex;
+            width: 80%;
+            height: 70vh;
 
             .neon-bar {
                 display: flex;
@@ -80,199 +81,65 @@
                 justify-content: center;
                 align-items: center;
 
-                .round-obj {
-                    width: 8px;
-                    height: 8px;
-                    border: 2px solid #696969;
-                    border-radius: 8px;
-                    margin-bottom: 1vh;
-                }
-
-                .neon-bar-primary,
-                .neon-bar-secondary {
-                    height: 50%;
-                    width: 12%;
-                    border-radius: 40px;
-                }
-
-                .neon-bar-primary {
-                    background: linear-gradient(
-                        $background-color,
-                        $primary-color
-                    );
-                }
-                .neon-bar-secondary {
-                    background: linear-gradient(
-                        $primary-color,
-                        $secondary-color
-                    );
+                .top-object {
+                    width: 10px;
+                    height: 10px;
+                    border: $quinary-color 3px solid;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
                 }
 
                 .icon-bar-container {
+                    margin: 10px 0;
                     position: relative;
-                    margin: 2vh 0;
 
-                    .icon-bar {
-                        color: #fff;
-                        white-space: nowrap;
+                    .icon-bar-img {
+                        width: 1.5rem;
                     }
 
                     .icon-bar-background {
+                        width: 2rem;
+                        height: 100%;
                         position: absolute;
                         top: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: $primary-color;
-                        filter: blur(18px);
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-
-            .section-content {
-                margin-left: 5%;
-
-                h1 {
-                    font-size: 6rem;
-                    font-weight: 700;
-                    color: #fff;
-                    margin: 0 0;
-                }
-
-                p {
-                    font-size: 1.5rem;
-                    color: $quinary-color;
-                    margin: 2vh 0;
-                    width: 60%;
-                }
-
-                .section-email {
-                    display: flex;
-                    align-items: center;
-                    margin: 7vh 0;
-
-                    input {
-                        width: 30%;
-                        padding: 2vh 1vw;
-                        border: none;
-                        border-radius: 7px 0 0 7px;
-                    }
-
-                    input:focus {
-                        outline: none;
-                    }
-
-                    button {
-                        color: #fff;
-                        background-color: #6e40c9;
-                        padding: 2vh 4vw;
-                        border: none;
-                        border-radius: 0 7px 7px 0;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                    }
-
-                    button:hover {
-                        background-color: $primary-color;
+                        filter: blur(28px);
                     }
                 }
 
-                .company-logos {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: left;
-                    align-items: center;
-                    height: 8vh;
-                    margin-top: 5vh;
-                    margin-bottom: 10vh;
-
-                    img {
-                        height: 100%;
-                        margin-right: 5%;
-                        margin-bottom: 5vh;
-                    }
+                .first-neon-bar,
+                .second-neon-bar {
+                    width: 13%;
+                    flex-grow: 1;
                 }
             }
         }
     }
+}
 
-    @media screen and (max-width: 1000px) {
-        background-size: auto 60vh;
-        background-position: right top;
-        background-repeat: no-repeat;
-    }
+#first-neon {
+    background: linear-gradient($background-color, $primary-color);
+    border-radius: 10px;
+}
 
-    @media screen and (max-width: 780px) {
-        background-size: auto 50vh;
-        background-position: right top;
-        background-repeat: no-repeat;
+#second-neon {
+    background: linear-gradient($primary-color, $secondary-color);
+    border-radius: 10px 10px 0 0;
+}
 
-        .landing-page-header {
-            margin: 0 5vw;
-            nav {
-                .landing-page-signin {
-                    margin-right: 5vw;
-                }
-            }
-        }
+#third-neon {
+    background-color: $secondary-color;
+    border-radius: 0 0 10px 10px;
+}
 
-        main {
-            section {
-                width: 90%;
-                .section-content {
-                    h1 {
-                        font-size: 4rem;
-                    }
+#fourth-neon {
+    background: linear-gradient($secondary-color, $tertiary-color);
+    border-radius: 10px 10px 0 0;
+}
 
-                    p {
-                        width: 80%;
-                    }
+#first-neon-background {
+    background-color: $primary-color;
+}
 
-                    .section-email {
-                        input {
-                            width: 60%;
-                        }
-                    }
-                    .company-logos {
-                        height: 6vh;
-
-                        img {
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: 500px) {
-        background-size: auto 50vh !important;
-        main {
-            section {
-                .section-content {
-                    h1 {
-                        font-size: 4rem;
-                    }
-
-                    p {
-                        width: 80%;
-                    }
-
-                    .section-email {
-                        input {
-                            width: 60%;
-                        }
-                    }
-                    .company-logos {
-                        height: 7vh;
-
-                        img {
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
+#second-neon-background {
+    background-color: $secondary-color;
 }

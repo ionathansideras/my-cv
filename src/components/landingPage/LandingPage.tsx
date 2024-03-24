@@ -4,6 +4,8 @@ import facebook from "../../assets/facebook.svg";
 import apple from "../../assets/apple.svg";
 import amazon from "../../assets/amazon.svg";
 import netflix from "../../assets/netflix.svg";
+import brackets from "../../assets/brackets2.svg";
+import star from "../../assets/star.svg";
 
 export default function LandingPage() {
     return (
@@ -22,15 +24,20 @@ export default function LandingPage() {
             <main>
                 <section>
                     <div className="neon-bar">
-                        <div className="round-obj"></div>
-                        <div className="neon-bar-primary"></div>
+                        <div className="top-object"></div>
+                        <div className="first-neon-bar" id="first-neon"></div>
                         <div className="icon-bar-container">
-                            <div className="icon-bar">{"< >"}</div>
-                            <div className="icon-bar-background"></div>
+                            <img className="icon-bar-img" src={brackets} />
+                            <div
+                                className="icon-bar-background"
+                                id="first-neon-background"
+                            ></div>
                         </div>
-                        <div className="neon-bar-secondary"></div>
+                        <div className="second-neon-bar" id="second-neon"></div>
                     </div>
-                    <div className="section-content">
+                    <h1>hello</h1>
+
+                    {/* <div className="section-content">
                         <h1>Let’s build from here</h1>
                         <p>
                             CanvasCV is a platform that allows you to create a
@@ -52,7 +59,21 @@ export default function LandingPage() {
                             <img src={amazon} alt="Amazon" />
                             <img src={netflix} alt="Netflix" />
                         </div>
+                    </div> */}
+                </section>
+                <section>
+                    <div className="neon-bar">
+                        <div className="first-neon-bar" id="third-neon"></div>
+                        <div className="icon-bar-container">
+                            <img className="icon-bar-img" src={star} />
+                            <div
+                                className="icon-bar-background"
+                                id="second-neon-background"
+                            ></div>
+                        </div>
+                        <div className="second-neon-bar" id="fourth-neon"></div>
                     </div>
+                    <h1>hello</h1>
                 </section>
             </main>
         </div>
