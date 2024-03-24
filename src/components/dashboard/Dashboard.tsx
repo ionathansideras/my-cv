@@ -35,6 +35,10 @@ export default function Dashboard() {
         <div>
             {data.projects.map((project: Project) => (
                 <div key={project.id}>
+                    <img
+                        src={`data:image/jpeg;base64,${project.thumb}`}
+                        alt={project.title}
+                    />
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
                     <button onClick={() => handleDeleteProject(project.id)}>
