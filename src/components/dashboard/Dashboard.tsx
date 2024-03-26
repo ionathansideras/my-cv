@@ -2,38 +2,35 @@ import {
     useGetProjectsQuery,
     useDeleteProjectMutation,
 } from "../../redux/store";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Project } from "../../types/types";
 import ProjectCreationPopUp from "./ProjectCreationPopUp";
 
 export default function Dashboard() {
-    const { data, isLoading } = useGetProjectsQuery();
+    const { data, isLoading } = useGetProjectsQuery({});
     const [deleteProject] = useDeleteProjectMutation();
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
-
-    function handleDeleteProject(id: number) {
+    function handleDeleteProject(id: string) {
         // Delete project logic
+        console.log("Deleting project with id: ", id);
         deleteProject(id);
     }
 
     if (isLoading) return <div>Loading...</div>;
 
     return (
-        <div>
+        <main className="dashboard">
             {data.projects.map((project: Project) => (
-                <div key={project.id}>
+                <section className="project-section" key={project["_id"]}>
                     <img src={project.thumb} alt={`${project.title} thumb`} />
-                    <h2>{project.title}</h2>
-                    <button onClick={() => handleDeleteProject(project.id)}>
+                    <h3>{project.title}</h3>
+                    <button onClick={() => handleDeleteProject(project["_id"])}>
                         delete project
                     </button>
                     <button>edit project</button>
-                </div>
+                </section>
             ))}
             <button onClick={() => setIsPopupOpen(!isPopupOpen)}>
                 add project
@@ -42,6 +39,6 @@ export default function Dashboard() {
                 isPopupOpen={isPopupOpen}
                 setIsPopupOpen={setIsPopupOpen}
             />
-        </div>
+        </main>
     );
 }

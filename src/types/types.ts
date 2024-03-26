@@ -1,5 +1,5 @@
 type Project = {
-    id: number;
+    _id: string;
     title: string;
     thumb: string;
 };
